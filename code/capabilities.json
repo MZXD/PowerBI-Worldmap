@@ -1,0 +1,39 @@
+{
+    "dataRoles": [
+        {
+            "displayName": "Latitude",
+            "description": "",
+            "name": "latitude",
+            "kind": "Measure"
+        },
+        {
+            "displayName": "",
+            "description": "",
+            "name": "",
+            "kind": "Measure"
+        }
+    ],
+    "dataViewMappings": [
+        {
+            "categorical": {
+                "categories": {
+                    "for": {
+                        "in": "category"
+                    },
+                    "dataReductionAlgorithm": {
+                        "top": {}
+                    }
+                },
+                "values": {
+                    "select": [
+                        {
+                            "bind": {
+                                "to": "measure"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}
