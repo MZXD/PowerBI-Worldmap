@@ -1,5 +1,10 @@
 {
-    "dataRoles": [
+    "dataRoles": [{
+            "displayName": "Timestamp",
+            "description": "",
+            "name": "timestamp",
+            "kind": "Grouping"
+        },
         {
             "displayName": "Latitude",
             "description": "",
@@ -7,33 +12,47 @@
             "kind": "Measure"
         },
         {
-            "displayName": "",
+            "displayName": "Longitude",
             "description": "",
-            "name": "",
+            "name": "longitude",
             "kind": "Measure"
-        }
-    ],
-    "dataViewMappings": [
+        },
         {
-            "categorical": {
-                "categories": {
-                    "for": {
-                        "in": "category"
-                    },
-                    "dataReductionAlgorithm": {
-                        "top": {}
-                    }
-                },
-                "values": {
-                    "select": [
-                        {
-                            "bind": {
-                                "to": "measure"
-                            }
-                        }
-                    ]
-                }
-            }
+            "displayName": "Tooltip",
+            "description": "(OPTIONAL)",
+            "name": "tooltip",
+            "kind": "Measure"
+        },
+        {
+            "displayName": "Segment",
+            "description": "(OPTIONAL)",
+            "name": "segment",
+            "kind": "Grouping"
+        },
+        {
+            "displayName": "Route Color",
+            "description": "(OPTIONAL)",
+            "name": "color",
+            "kind": "Grouping"
+        },
+        {
+            "displayName": "Route Width",
+            "description": "(OPTIONAL)",
+            "name": "width",
+            "kind": "Grouping"
         }
-    ]
+
+
+    ],
+    "dataViewMappings": [{
+        "conditions": [{
+            "timestamp": { "max": 1, "min": 1 },
+            "latitude": { "max": 1 },
+            "longitude": { "max": 1 },
+            "tooltip": { "max": 1 },
+            "segment": { "max": 1 },
+            "color": { "max": 1 },
+            "width": { "max": 1 }
+        }]
+    }]
 }
